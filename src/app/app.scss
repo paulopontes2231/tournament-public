@@ -1,0 +1,24 @@
+body{
+  background-color: red;
+}
+
+/* You can add global styles to this file, and also import other style files */
+$base-dark: #14242E;
+$base-color: #1A2F3D;
+$base-light: #95BFD8;
+$base-gold: #FFD700;
+
+html {
+
+}
+
+body {
+    margin: 0px;
+    overflow-x: hidden;
+
+}
+
+html, body {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }

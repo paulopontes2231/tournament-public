@@ -1,0 +1,68 @@
+.filter-bar {
+    height: fit-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: fit-content;
+    padding-inline: 20px;
+    margin-inline: auto;
+    position: relative;
+    top: 20px;
+}
+
+mat-select {
+    max-width: 200px;
+    width: 100%;
+}
+
+input {
+    max-width: 200px;
+    width: 100%;
+}
+
+.image {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .filter-bar {
+        height: fit-content;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+   form{
+        max-width: 80%;
+    }
+
+
+    mat-form-field {
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+   
+
+    .image {
+        width: 50px;
+        height: 50px;
+        }
+
+}

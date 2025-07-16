@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="filter-bar">
+
+        <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/CDP_logo.png">
+        <form class="filter-form">
+            <mat-form-field class="example-full-width">
+                <mat-select [(ngModel)]="selectedEscalao" name="escalao" placeholder="Escalão">
+                    <mat-option value="sub15">Sub15</mat-option>
+                    <mat-option value="sub17">Sub17</mat-option>
+                    <mat-option value="seniores">Séniores</mat-option>
+                </mat-select></mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-select placeholder="Género" [(ngModel)]="selectedGenero" name="genero">
+                    <mat-option value="Feminino">Feminino</mat-option>
+                    <mat-option value="Masculino">Masculino</mat-option>
+                    <mat-option value="Misto">Misto</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Nome da Equipa" [(ngModel)]="nomeEquipa" name="nomeEquipa">
+            </mat-form-field>
+        </form>
+
+
+        <button matButton="tonal" (click)="pesquisar()">Pesquisar</button>
+        <button matButton="tonal" (click)="limparFiltros()">Limpar Filtros</button>
+
+
+    </div>
+
+
+</div>

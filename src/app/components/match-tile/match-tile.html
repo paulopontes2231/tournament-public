@@ -1,0 +1,54 @@
+<div class="box">
+    <div class="match-tile">
+        <div class="row">
+            <div class="title"> {{title}} </div>
+        </div>
+        <div class="details">
+            <div class="firstLine line">
+                <div class="field">
+                    <mat-icon> location_on</mat-icon>
+                    {{ this.match.field }}
+                </div>
+                <div class="gameNumber">
+                    Game
+                    {{ this.match.gameNumber }} | {{this.match.round}}
+                </div>
+            </div>
+            <div class="secondLine line">
+                <div class="time">
+                    <mat-icon class="timeIcon">access_time</mat-icon>
+                    {{ this.match.startTime }}
+                </div>
+                <div class="status">
+                    {{ this.match.status }}
+                    <div class="statusC" *ngIf="this.match.status === 'Finalizado'">
+                        <mat-icon class="statusIcon">check_box</mat-icon>
+                    </div>
+                    <div class="statusC" *ngIf="this.match.status === 'A decorrer'">
+                        <mat-icon class="statusIcon">loop</mat-icon>
+                    </div>
+                    <div class="statusC" *ngIf="this.match.status === 'Por começar'">
+                        <mat-icon class="statusIcon">hourglass_top</mat-icon>
+                    </div>
+                </div>
+            </div>
+           
+            <div  class="secondLine line">
+                <div class="score" *ngIf="match.status==='Finalizado'">
+                    <mat-icon class="scoreIcon">sports_volley</mat-icon>
+                    <div class="setScore" *ngFor="let set of match.score; let i = index">
+                        {{ set[0] }} - {{ set[1] }}  
+                    </div>
+                </div>
+                <div class="levelGender" >
+                    <div class="levelGender" >
+                        {{ match.level }} - 
+                        {{ match.gender }}  
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
