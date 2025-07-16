@@ -21,7 +21,6 @@ export class AllMatches implements OnInit {
       next: (matches) => {
       
         this.matchService.matches = matches;
-        console.log('Matches loaded:', this.matchService.matches);
       },
       error: (error) => {
         console.error('Erro ao buscar os matches:', error);

@@ -1,0 +1,6 @@
+<div class="bar" style="">
+    <button matButton="tonal" [disabled]="matchService.matches[index].status != 'Por começar'" (click)="start()">Começar</button>
+    <button matButton="tonal"(click)="finish()"   [disabled]="matchService.matches[index].status != 'A decorrer'" >Finalizar</button> <!-- -->
+    <button matButton="tonal" (click)="deleteMatch()">Apagar</button>
+
+</div>

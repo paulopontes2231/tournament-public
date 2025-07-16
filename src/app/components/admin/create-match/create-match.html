@@ -1,0 +1,68 @@
+<div class="container" style="margin-bottom: 30px; width: 80%; margin-inline: auto;">
+    <div class="create-match">
+
+        <form class="create-form">
+
+            <!-- teamA -->
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Equipa A" [(ngModel)]="match.teamA" name="teamA" required>
+            </mat-form-field>
+
+            <!-- teamB -->
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Equipa B" [(ngModel)]="match.teamB" name="teamB" required>
+            </mat-form-field>
+
+            <!-- startTime -->
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Data/Hora" [(ngModel)]="match.startTime" name="startTime" required>
+            </mat-form-field>
+
+            <!-- round -->
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Ronda" [(ngModel)]="match.round" name="round">
+            </mat-form-field>
+
+            <!-- gameNumber -->
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Nº do jogo" [(ngModel)]="match.gameNumber" name="gameNumber" required>
+            </mat-form-field>
+
+            <!-- field -->
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Campo" [(ngModel)]="match.field" name="field" required>
+            </mat-form-field>
+
+            <!-- level -->
+            <mat-form-field class="example-full-width">
+                <mat-select [(ngModel)]="match.level" name="level" placeholder="Escalão">
+                    <mat-option value="Sub15">Sub15</mat-option>
+                    <mat-option value="Sub17">Sub17</mat-option>
+                    <mat-option value="Seniores">Séniores</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <!-- gender -->
+            <mat-form-field class="example-full-width">
+                <mat-select [(ngModel)]="match.gender" name="gender" placeholder="Género">
+                    <mat-option value="Feminino">Feminino</mat-option>
+                    <mat-option value="Masculino">Masculino</mat-option>
+                    <mat-option value="Misto">Misto</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <!-- status -->
+            <mat-form-field class="example-full-width">
+                <mat-select [(ngModel)]="match.status" name="status" placeholder="Estado">
+                    <mat-option value="Por começar">Por começar</mat-option>
+                    <mat-option value="A decorrer">A decorrer</mat-option>
+                    <mat-option value="Finalizado">Finalizado</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" (click)="submitMatch()">Submit</button>
+        </form>
+    </div>
+
+
+</div>

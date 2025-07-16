@@ -18,4 +18,21 @@ export class MatchService {
   getMatchesByFilter(filter: any): Observable<any[]> {
     return this.http.post<any[]>(`${this.apiUrl}/filter`, filter);
   }
+
+  createMatch(match: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, match);
+  }
+
+  startMatch(match: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${match._id}`, match);
+  }
+
+  finishMatch(match: any ): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${match._id}`, match);
+  }
+
+  deleteMatch(match: any): Observable<any> {
+    console.log(match)
+    return this.http.delete<any>(`${this.apiUrl}/${match._id}`);
+  }
 }

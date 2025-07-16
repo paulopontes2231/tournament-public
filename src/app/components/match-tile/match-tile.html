@@ -32,19 +32,24 @@
                     </div>
                 </div>
             </div>
-           
-            <div  class="secondLine line">
-                <div class="score" *ngIf="match.status==='Finalizado'">
-                    <mat-icon class="scoreIcon">sports_volley</mat-icon>
-                    <div class="setScore" *ngFor="let set of match.score; let i = index">
-                        {{ set[0] }} - {{ set[1] }}  
+
+            <div class="secondLine line">
+                
+                <div class="levelGender">
+                    <mat-icon class="levelGenderIcon">group</mat-icon>
+
+                    <div class="levelGender">
+                        {{ match.level }} -
+                        {{ match.gender }}
                     </div>
                 </div>
-                <div class="levelGender" >
-                    <div class="levelGender" >
-                        {{ match.level }} - 
-                        {{ match.gender }}  
+
+                <div class="score" *ngIf="match.status==='Finalizado'">
+                    
+                    <div class="setScore" *ngFor="let set of match.score; let i = index">
+                        {{ set[0] }}-{{ set[1] }}
                     </div>
+                    <mat-icon class="scoreIcon">sports_volley</mat-icon>
                 </div>
 
             </div>

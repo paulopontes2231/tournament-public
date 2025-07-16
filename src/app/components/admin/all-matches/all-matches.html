@@ -1,0 +1,10 @@
+
+<div class="matches">
+  <div class="emptyMatches" *ngIf="matchService.matches.length === 0">
+    <h2 class="emptyMessage">Não existem jogos para os filtros de pesquisa utilizados</h2>
+  </div>
+  <div *ngFor="let match of matchService.matches; let i = index">
+    <app-match-tile class="match" [index]="i"></app-match-tile>
+    <app-update-match class="update" [index]="i"></app-update-match>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<form class="create-form">
+    <div *ngFor="let set of scores; let i = index">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Resultado Equipa A" [(ngModel)]="scores[i][0]" required
+                [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Resultado Equipa B" [(ngModel)]="scores[i][1]" required
+                [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="removeSet(i)" *ngIf="i != 0">Remover Set</button>
+
+    </div>
+    <!-- teamA -->
+
+    <button mat-raised-button color="primary" (click)="addSet()" [disabled]="scores.length == 3">Adicionar Set</button>
+    <button mat-raised-button color="primary" (click)="submitMatch()">Concluir</button>
+</form>
